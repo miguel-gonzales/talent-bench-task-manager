@@ -5,24 +5,25 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Task Manager</title>
+  <link rel="stylesheet" href="src/ui/css/main.css" />
 </head>
 
-<body>
-  <header>
-    <h1>Task Manager</h1>
+<body class="page">
+  <header class="page__header">
+    <h1 class="page__title">Task Manager</h1>
   </header>
 
-  <main>
-    <section>
-      <form>
-        <input type="text" name="task-title" id="task-title" required>
-        <button type="submit">Add Task</button>
+  <main class="page__main">
+    <section class="task-app" id="app">
+      <form class="task-form" id="taskForm" novalidate>
+        <input class="task-form__input" type="text" name="task-title" id="task-title" placeholder="Task Title" required>
+        <button type="submit" class="btn btn--primary">Add Task</button>
       </form>
-      <ul></ul>
+      <ul id="taskList" class="task-list" aria-live="polite"></ul>
     </section>
   </main>
 
-  <footer>
+  <footer class="page__footer">
     <small>Manage with purpose</small>
   </footer>
 </body>
