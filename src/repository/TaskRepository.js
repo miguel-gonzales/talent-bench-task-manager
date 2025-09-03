@@ -12,7 +12,7 @@ export class TaskRepository {
     if (this.seedLoaded) return;
     const existing = localStorage.getItem(this.key);
     if (!existing) {
-      fetch("./src/infrastructure/tasks.json")
+      fetch("/tasks.json")
         .then(r => r.json())
         .then(seed => localStorage.setItem(this.key, JSON.stringify(seed)));
     }
